@@ -5,18 +5,18 @@
 
 int main()
 {
-    int num,*arr,i,temp;
-    scanf("%d", &num);
-    arr = (int*) malloc(num * sizeof(int));
-    for(i = 0; i < num; i++) {
+    int n,*arr,i,temp;
+    scanf("%d", &n);
+    arr = (int*) malloc(n * sizeof(int));
+    for(i = 0; i < n; i++) {
         scanf("%d", arr + i);
     }
-    for(int i = 0; i<num/2; i++){
+    for(int i = 0; i<n/2; i++){
         temp = arr[i];
-        arr[i] = arr[num-i-1];
-        arr[num-i-1] = temp;
+        arr[i] = arr[n-i-1];
+        arr[n-i-1] = temp;
     }
-    for(int i = 0; i < num; i++){
+    for(int i = 0; i < n; i++){
         printf("%d ", arr[i]);
     }
     return 0;
